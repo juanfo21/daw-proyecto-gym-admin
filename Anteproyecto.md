@@ -1,24 +1,24 @@
-Anteproyecto: Gym-Admin
+Anteproyecto: Gym-Admin.
 
 
 
-Módulo: Proyecto Intermodular (0379 · PIDW2) — 2º DAW Virtual
+Módulo: Proyecto Intermodular (0379 · PIDW2) — 2º DAW Virtual.
 
 
 
-Centro: CIFP Avilés (Curso 2026/2027)
+Centro: CIFP Avilés (Curso 2026/2027).
 
 
 
-Autor/a: Juan Fernández Ordiales
+Autor/a: Juan Fernández Ordiales.
 
 
 
-Repositorio GitHub: https://github.com/juanfo21/daw-proyecto-gym\_admin
+Repositorio GitHub: https://github.com/juanfo21/daw-proyecto-gym\_admin.
 
 
 
-Tablero GitHub Projects: https://github.com/users/juanfo21/projects/2
+Tablero GitHub Projects: https://github.com/users/juanfo21/projects/2.
 
 
 
@@ -30,21 +30,11 @@ Tablero GitHub Projects: https://github.com/users/juanfo21/projects/2
 
 
 
-\### 1.1. Elevator pitch (100–150 palabras)
+\### 1.1. Elevator pitch
 
 
 
-Este proyecto consiste en la creación de un programa para un gimnasio que servirá para gestionar turnos en las maquinas y equipos de el propio gimnasio
-
-para así facilitar el orden durante los entrenamientos mediante el uso de un Sistema de usuarios registrados los socios podrán reservar equipamiento
-
-y tener prioridad a la hora de usar el mismo durante un tiempo prestablecido, esto Tambien permitirá la gestion de pagos atreves de el mismo Sistema
-
-y la reserve de sesiones con entrenadores privados e inscribirse en actividades de clubes deportivos registrados en el mismo polideportivo.
-
-De este modo el programa reunirá todas estas funciones en un espacio digital.
-
-
+Este proyecto consiste en un programa para gimnasios centrado en la gestión y reserva de turnos en máquinas y equipamiento. Mediante el sistema de usuarios registrados, los socios podrán consultar la disponibilidad en tiempo real y reservar el equipo que necesiten para una franja horaria concreta. Facilitando la rotación entre usuarios, impidiendo reservas duplicadas y permitiendo reservas una hora después de la hora actual. Los turnos otorgan prioridad en el uso del equipamiento y pueden ser eliminados en cualquier momento por el usuario. De este modo, se reducirán las esperas, se organizará mejor el uso del gimnasio en las horas punta y se mejorará la experiencia de los socios, permitiéndoles planificar su entrenamiento con antelación y acceder al equipamiento de forma más ordenada y equitativa.
 
 
 
@@ -52,16 +42,16 @@ De este modo el programa reunirá todas estas funciones en un espacio digital.
 
 
 
-El publico objetivo serian los gestores de el gimnasio, los entrenador privados, los socios de el gimnasio y los clubes deportivos.
+El publico objetivo son los gestores del gimnasio, los entrenadores privados, los socios del gimnasio y los clubes deportivos.
 
 
 
-Posibles usos serian:
+Posibles usos son:
 
 
 
-* Gestionar los dispositivos de el gimnasio en hora punta.
-* Centralizar la gestion de los diferentes clubes en un solo lugar.
+* Gestionar los dispositivos del gimnasio en hora punta.
+* Centralizar la gestión de los diferentes clubes en un solo lugar.
 * Planificar los entrenamientos con entrenadores personales.
 * Manejar el pago y renovación de membresía online para eliminar la necesidad de pasar por recepción.
 
@@ -73,23 +63,55 @@ Posibles usos serian:
 
 
 
-\### 2.1. Matriz de roles (RBAC) -
+\### 2.1. Matriz de roles
 
 
 
-Administrador: Gestion de cuentas, roles, maquinas y sus franjas de disponibilidad, sesiones con entrenadores y registros en los clubes.
+Administrador:
+
+&#x09;Crear, editar, desactivar o eliminar cuentas de usuarios.
+
+&#x09;Asignar o revocar permisos y administrar los roles del sistema.
+
+&#x09;Crear, editar, habilitar, deshabilitar y eliminar máquinas, puestos, equipamiento y sus franjas de disponibilidad.
+
+&#x09;Consultar, modificar o cancelar cualquier reserva realizada por los usuarios.
+
+&#x09;Gestionar los pagos, consultar el historial de transacciones y resolver incidencias de cobro.
+
+&#x09;Crear y administrar sesiones con entrenadores.
+
+&#x09;Crear, editar y eliminar clubes deportivos, así como gestionar las inscripciones y los registros de sus miembros.
+
+&#x09;Configurar parámetros generales del sistema, como límites de reserva, horarios de apertura y mensajes públicos.
 
 
 
-Usuario registrado: Consultar la disponibilidad y registrar turno en el equipamiento, realizar pagos, registrarse en clubes y gestionar su propio perfil.
+Usuario registrado:
+
+&#x09;Consultar la disponibilidad y registrar turno en el equipamiento.
+
+&#x09;Cancelar únicamente sus propias reservas.
+
+&#x09;Realizar pagos.
+
+&#x09;Registrarse y darse de baja en clubes.
+
+&#x09;Reservar o cancelar sesiones con entrenadores.
+
+&#x09;Gestionar su propio perfil.
 
 
 
-Público / invitado: Pude consultar información publica de el gimnasio y registrarse en la pagina.
+Público / invitado:
+
+&#x09;Puede consultar información pública del gimnasio.
+
+&#x09;Registrarse en la página.
 
 &#x20;
 
-\### 2.2. Casos de uso principales (mínimo 6)
+\### 2.2. Casos de uso principales
 
 
 
@@ -97,7 +119,51 @@ Público / invitado: Pude consultar información publica de el gimnasio y regist
 
 
 
+&#x09;Actor: Usuario/Público.
+
+&#x09;
+
+&#x09;Precondición: En caso de inicio de sesión: tener cuenta ya creada, en caso de registro: nada.
+
+
+
+&#x09;Pasos:
+
+&#x09;
+
+&#x09;-El Usuario/Público rellena el formulario.	
+
+&#x09;-El sistema valida los datos comprobando que sean correctos / válidos.
+
+&#x09;-El sistema crea la cuenta / iniciar sesión.
+
+
+
+
+
 2\. CU-02: Gestionar equipos y franjas disponibles.
+
+
+
+&#x09;Actor: Administrador.
+
+&#x09;
+
+&#x09;Precondición: Existe equipamiento.
+
+&#x09;
+
+&#x09;Pasos:
+
+&#x09;
+
+&#x09;-El administrador accede a la gestión de equipamiento.
+
+&#x09;-El administrador crea, edita, habilita, deshabilita o elimina un equipo.
+
+&#x09;-El administrador define o modifica las franjas de disponibilidad.
+
+&#x09;-El sistema guarda los cambios y actualiza el calendario de disponibilidad.
 
 
 
@@ -105,7 +171,53 @@ Público / invitado: Pude consultar información publica de el gimnasio y regist
 
 
 
+&#x09;Actor: Administrador.
+
+&#x09;
+
+&#x09;Precondición: Existen entrenadores.
+
+
+
+&#x09;Pasos:
+
+&#x09;
+
+&#x09;-El administrador accede a la gestión de sesiones con entrenadores.
+
+&#x09;-El administrador selecciona crear, editar, publicar, cancelar o eliminar una sesión.
+
+&#x09;-El sistema publica la sesión y la deja disponible para reservas de los usuarios registrados.	
+
+
+
 4\. CU-04: Reservar y cancelar turnos en los equipos.
+
+
+
+&#x09;Actor: Usuario.
+
+&#x09;
+
+&#x09;Precondición: El usuario ha iniciado sesión y existen equipos disponibles.
+
+
+
+&#x09;Pasos:
+
+&#x09;
+
+&#x09;-El usuario selecciona un equipo y una franja horaria.
+
+&#x09;-El sistema comprueba que la franja esté libre.
+
+&#x09;-El usuario confirma la reserva.
+
+&#x09;-El sistema registra el turno, asigna el equipo al usuario y muestra la confirmación.
+
+&#x09;-El usuario selecciona una reserva y la cancela.
+
+&#x09;-El sistema elimina su reserva. 
 
 
 
@@ -113,7 +225,59 @@ Público / invitado: Pude consultar información publica de el gimnasio y regist
 
 
 
+&#x09;Actor: Usuario.
+
+&#x09;
+
+&#x09;Precondición: El usuario ha iniciado sesión y tiene una tarifa establecida. 
+
+&#x09;
+
+&#x09;Pasos:
+
+&#x09;
+
+&#x09;-El usuario accede a la sección de pagos.
+
+&#x09;-El usuario selecciona pagar.
+
+&#x09;-El usuario rellena el formulario.
+
+&#x09;-El sistema envía la solicitud a la pasarela de pago.
+
+&#x09;-La pasarela confirma la transacción.
+
+&#x09;-El sistema registra el pago y actualiza el estado de la membresía.	
+
+
+
 6\. CU-06: Registrarse como miembro de los diferentes clubes.
+
+
+
+&#x09;Actor: Usuario.
+
+&#x09;
+
+&#x09;Precondición: El usuario ha iniciado sesión y existen clubes.
+
+
+
+&#x09;Pasos:
+
+&#x09;
+
+&#x09;-El usuario accede a la sección de clubes deportivos.
+
+&#x09;-El usuario selecciona un club.
+
+&#x09;-El usuario confirma su inscripción.
+
+&#x09;-El sistema comprueba que el usuario no esté ya inscrito.
+
+&#x09;-El sistema registra la inscripción y muestra la confirmación.
+
+&#x09;	
 
 
 
@@ -121,7 +285,57 @@ Público / invitado: Pude consultar información publica de el gimnasio y regist
 
 
 
+&#x09;Actor: Usuario/Público.
+
+&#x09;
+
+&#x09;Precondición: La página está accesible.
+
+
+
+&#x09;Pasos:
+
+&#x09;
+
+&#x09;-El usuario accede la página principal del gimnasio.
+
+&#x09;-El sistema muestra información.
+
+&#x09;-El usuario selecciona la sección que quiere consultar.
+
+&#x09;-El usuario mira la información.
+
+&#x09;
+
+
+
 8\. CU-08: Gestionar cambios en el perfil de usuario.
+
+
+
+&#x09;Actor: Usuario.
+
+&#x09;
+
+&#x09;Precondición: El usuario ha iniciado sesión.
+
+
+
+&#x09;Pasos:
+
+&#x09;
+
+&#x09;-El usuario accede a su perfil.
+
+&#x09;-El sistema muestra sus datos personales.
+
+&#x09;-El usuario selecciona editar.
+
+&#x09;-El usuario cambia los datos en el formulario.
+
+&#x09;-El sistema valida los cambios.
+
+&#x09;-El sistema guarda los cambios.
 
 
 
@@ -175,31 +389,59 @@ Fuera del MVP: \[Funcionalidades que se abordarán con los Add-ons o quedan como
 
 
 
-&#x20;Diagrama Entidad-Relación en 3FN:
-
-
-
-&#x20;	Relación 1:N: \[SOCIO → RESERVA\_MAQUINA]
+Entidades principales:
 
 &#x09;
 
-&#x09;Relación 1:N: \[MAQUINA A → RESERVA\_MAQUINA]
+&#x09;-SOCIO: 
+
+&#x09;	Usuario registrado con información sobre su persona y contactos.
 
 
 
-&#x09;Relación 1:N: \[SOCIO → PAGO]
+&#x09;-ENTRENADOR:
+
+&#x09;	Entrenador del gimnasio con información de identificación y contacto.
 
 
 
-&#x09;Relación 1:N: \[SOCIO → SESION\_ENTRENAMIENTO]
+&#x09;-CLUB:
+
+&#x09;	Club deportivo situado en el recinto con información descriptiva.
 
 
 
-&#x09;Relación 1:N: \[ENTRENADOR → SESION\_ENTRENAMIENTO]
+&#x09;-MAQUINA:
+
+&#x09;	Objeto de equipamiento o máquina del gimnasio.
 
 
 
-&#x20;	Relación M:N:\*\* \[SOCIO ↔ CLUB mediante REGISTRO\_CLUB(id\_socio, id\_club)]
+&#x09;-PAGO:
+
+&#x09;	Entidad con información relevante para el pago de una membresía.
+
+
+
+&#x09;-ZONA:	
+
+&#x09;	Entidad con información sobre la ubicación en el recinto de un equipamiento o club.
+
+
+
+&#x09;-FRANJA\_HORARIA: 
+
+&#x09;	Entidad con información sobre las horas disponibles para otra entidad como MAQUINA o ENTRENADOR.
+
+&#x09;
+
+Relación transaccional principal prevista:
+
+
+
+&#x09;-RESERVA\_MAQUINA -> SOCIO ↔ MAQUINA: id\_reserva, id\_socio, id\_maquina, fecha, hora\_inicio, hora\_fin, estado, fecha\_creacion
+
+
 
 
 
@@ -207,39 +449,35 @@ Fuera del MVP: \[Funcionalidades que se abordarán con los Add-ons o quedan como
 
 
 
-Motor de base de datos: MySQL
+Motor de base de datos: MySQL.
 
 
 
-es una tecnología ampliamente utilizada, con abundantes recursos de aprendizaje.
+Es una tecnología ampliamente utilizada, con abundantes recursos de aprendizaje.
 
 
 
-Backend API: Node.js
+Backend API: Node.js.
 
 
 
-su arquitectura basada en operaciones asíncronas resulta adecuada para gestionar las solicitudes de los usuarios, las consultas a la base de datos y las operaciones de reserva.
+Su arquitectura basada en operaciones asíncronas resulta adecuada para gestionar las solicitudes de los usuarios, las consultas a la base de datos y las operaciones de reserva.
 
 
 
-Frontend: Next.js
+Frontend: Next.js.
 
 
 
-Integración con Node.js, comparte el ecosistema JavaScript facilita añadir nuevas páginas
-
-y funcionalidades sin tener que construir toda la estructura de la aplicación desde cero.
+Integración con Node.js, comparte el ecosistema JavaScript y facilita añadir nuevas páginas y funcionalidades sin tener que construir toda la estructura de la aplicación desde cero.
 
 
 
-
-
-Alojamiento cloud previsto: Railway
+Alojamiento cloud previsto: Railway.
 
 
 
-integración directa con MySQL, configuración centralizada y despliegue sencillo de frontend y backend
+Integración directa con MySQL, configuración centralizada y despliegue sencillo de frontend y backend
 
 
 
@@ -247,11 +485,9 @@ integración directa con MySQL, configuración centralizada y despliegue sencill
 
 
 
-\- Pasarela de pagos Stripe en entorno Sandbox con Webhooks
+\- Generación de informes en PDF/Excel en backend. 
 
 
 
-\- WebSockets / Comunicación en tiempo real
-
-
+\- WebSockets / Comunicación en tiempo real.
 
