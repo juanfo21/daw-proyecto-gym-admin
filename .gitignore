@@ -1,0 +1,34 @@
+# DEPENDENCIAS DE NODE.JS
+
+node_modules/
+
+.pnp
+
+.pnp.*
+
+.yarn/*
+
+# NEXT.JS
+
+.next/
+
+out/
+
+# COMPILACIÓN Y COBERTURA
+
+dist/
+
+build/
+
+coverage/
+
+# VARIABLES DE ENTORNO Y CREDENCIALES
+
+.env
+
+# EDITORES E IDE
+
+.vscode/
+
+.idea/
+
