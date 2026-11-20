@@ -4,7 +4,10 @@
   "description": "Proyecto de administracion de gimnasios",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "migrate": "tsx src/db/scripts/migrate.ts",
+    "seed": "tsx src/db/scripts/seed.ts"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,23 @@
   "bugs": {
     "url": "https://github.com/juanfo21/daw-proyecto-gym_admin/issues"
   },
-  "homepage": "https://github.com/juanfo21/daw-proyecto-gym_admin#readme"
+  "homepage": "https://github.com/juanfo21/daw-proyecto-gym_admin#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "kysely": "^0.29.9",
+    "mysql2": "^3.24.6"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
 }
