@@ -38,7 +38,7 @@ export async function up(db: Kysely<any>): Promise<void> {
         fecha_alta: new Date(Date.now())
       },
       {
-        name: 'Juan',
+        name: 'Fernando',
         surname: 'Fernandez Ordiales',
         dni: '12345678C',
         email: 'socio3@gmail.com',
